@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { HttpModule } from '@angular/http';
-
 import { AppRouting } from './app.routing';
 
 import { AppComponent } from './app.component';
@@ -19,8 +17,7 @@ import { NoticiasComponent } from './noticias/noticias.component';
   ],
   imports: [
     BrowserModule,
-    AppRouting,
-    HttpModule
+    AppRouting
   ],
   providers: [EstadisticasService],
   bootstrap: [AppComponent]

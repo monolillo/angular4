@@ -19,5 +19,4 @@ export class EstadisticasComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
