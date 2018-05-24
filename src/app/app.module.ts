@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRouting } from './app.routing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { EstadisticasComponent } from './estadisticas/estadisticas.component';
@@ -17,7 +18,8 @@ import { NoticiasComponent } from './noticias/noticias.component';
   ],
   imports: [
     BrowserModule,
-    AppRouting
+    AppRouting,
+    HttpClientModule
   ],
   providers: [EstadisticasService],
   bootstrap: [AppComponent]
