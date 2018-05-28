@@ -1,5 +1,37 @@
-<ul>
-  <li *ngFor="let equipo of equipos">
-  	 <span class="badge">{{equipo.id}}</span> {{equipo.nombre}}
-  </li>
-</ul>
+<div class="card-header">Productos del catalogo</div>
+<div class="card-body table-responsive">
+	<table class="table table-hover table-striped">
+		<thead class="ng-tns-c12-2">
+			<tr class="ng-tns-c12-2">
+				<th class="ng-tns-c12-2">Numero</th>
+				<th class="ng-tns-c12-2">Nombre</th>
+				<th class="ng-tns-c12-2">Precio</th>
+				<th class="ng-tns-c12-2">Cantidad</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="ng-tns-c12-2" *ngFor="let producto of productosCatalog">
+				<th class="ng-tns-c12-2">{{producto.itemNumber}}</th>
+				<th class="ng-tns-c12-2">{{producto.name}}</th>
+				<th class="ng-tns-c12-2">{{producto.price}}</th>
+				<th class="ng-tns-c12-2">{{producto.quantity}}</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<!-- <ul> -->
+<!--   <li *ngFor="let producto of productosCatalog"> -->
+<!--   	 {{producto.name}} -->
+<!--   	 <span class="badge">{{producto.itemNumber}}</span> -->
+<!--   	 <span class="badge">{{producto.idProduct}}</span> -->
+<!--   	 <span class="badge">{{producto.price}}</span> -->
+<!--   	 <span class="badge">{{producto.imageUrl}}</span> -->
+<!--   	 <span class="badge">{{producto.min}}</span> -->
+<!--   	 <span class="badge">{{producto.max}}</span> -->
+<!--   	 <span class="badge">{{producto.quantity}}</span> -->
+<!--   	 <span class="badge">{{producto.critical}}</span> -->
+<!--   	 <span class="badge">{{producto.locationId}}</span> -->
+<!--   </li> -->
+<!-- </ul> -->

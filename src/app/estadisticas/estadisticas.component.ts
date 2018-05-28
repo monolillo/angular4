@@ -1,3 +1,4 @@
+import { ProductCatalog } from '../entidades/productcatalog';
 import { Component, OnInit } from '@angular/core';
 import { EstadisticasService } from './estadisticas.service';
 
@@ -11,12 +12,15 @@ import { EQUIPOS } from '../mocks/equipos-mock';
 })
 export class EstadisticasComponent implements OnInit {
 
-  equipos = this.estadisticasService.getAllProducts();
+  productosCatalog: ProductCatalog[];
 
   constructor(
     private estadisticasService: EstadisticasService
   ) { }
 
   ngOnInit() {
+    this.estadisticasService.getAllProducts().subscribe(data => {
+      this.productosCatalog = data;
+    })
   }
 }
